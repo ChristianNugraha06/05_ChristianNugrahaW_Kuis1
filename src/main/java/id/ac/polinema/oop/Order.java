@@ -25,4 +25,13 @@ public class Order {
 
     }
 
+    public int getitemCount(){
+        return itemCount;
+
+    }
+
+    
+
+
+
 }
