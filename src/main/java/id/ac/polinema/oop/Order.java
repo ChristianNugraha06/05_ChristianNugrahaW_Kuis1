@@ -1,0 +1,28 @@
+package id.ac.polinema.oop;
+
+public class Order {
+    private Customer customer;
+    private OrderItem[] items;
+    private int itemCount;
+
+    public Order (Customer customer){
+        this.customer = customer;
+        this.items = new OrderItem[10];
+        this.itemCount = 0;
+    }
+
+    public Customer getcustomer(){
+        return customer;
+    }
+
+    public void addItem(MenuItem menuItem, int quantity){
+
+        if (itemCount >= items.length) {
+            return ;
+        }
+        items[itemCount] = new OrderItem(menuItem, quantity);
+        itemCount++;
+
+    }
+
+}
